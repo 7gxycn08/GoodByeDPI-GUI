@@ -4,6 +4,8 @@ Start/Stop and Monitor GoodByeDPI directly from your system tray!
 
 
 To start on windows boot run with windows task scheduler and select run with highest privileges.
+
+
 GoodByeDPI Documentation: https://github.com/ValdikSS/GoodbyeDPI
 
 
