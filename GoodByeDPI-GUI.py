@@ -24,6 +24,11 @@ MODES = {
     "-4": {"-p": True, "-r": True, "-s": True},
     "-5": {"-f": 2, "-e": 2, "--auto-ttl": "1-4-10", "--reverse-frag": True, "--max-payload": 1200},
     "-6": {"-f": 2, "-e": 2, "--wrong-seq": True, "--reverse-frag": True, "--max-payload": 1200},
+    "-7": {"-f": 2, "-e": 2, "--wrong-chksum": True, "--reverse-frag": True, "--max-payload": 1200},
+    "-8": {"-f": 2, "-e": 2, "--wrong-chksum": True, "--wrong-seq": True, "--reverse-frag": True,
+           "--max-payload": 1200},
+    "-9": {"-q": True, "-f": 2, "-e": 2, "--wrong-chksum": True, "--wrong-seq": True, "--reverse-frag": True,
+           "--max-payload": 1200}
 }
 
 class GoodbyeDPIGUI(QWidget):
@@ -40,7 +45,7 @@ class GoodbyeDPIGUI(QWidget):
         self.message_box = QMessageBox()
 
         self.icon_update_thread.run = self.update_tray_icon
-        self.setWindowTitle("GoodbyeDPI-GUI v1.0")
+        self.setWindowTitle("GoodbyeDPI-GUI v1.1")
         self.setWindowIcon(QIcon(r"Resources\Icon1.ico"))
         self.setMinimumSize(800, 800)
         self.checkbox_flags = {}
